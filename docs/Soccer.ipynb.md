@@ -2,12 +2,16 @@
 import pandas as pd
 import os
 import glob
+import numpy as np
+from scipy import stats
+import seaborn as sns
+import matplotlib.pyplot as plt
 import warnings
 
 warnings.filterwarnings('ignore')
 
 csv_files = glob.glob(os.path.join(
-    'Folder', '*.csv'
+    'data.csv', '*.csv'
 ))
 
 catapult = []
@@ -18,77 +22,77 @@ for file in csv_files:
 
 catapult = pd.concat(catapult, ignore_index=True)
 
-df = catapult[~catapult['Player Name'].isin(['Players to remove from analysis'])]
+df = catapult[~catapult['Player Name'].isin(['List of players to remove'])]
 
-df = df[['Player Name', 'Date', 'Total Player Load', 'Player Load Per Minute']]
+df = df[['Player Name', 'Date', 'Total Player Load']]
 ```
 
 ```Python
-import numpy as np
-from scipy import stats
-import matplotlib.pyplot as plt
-
-mu, std = stats.norm.fit(df['Total Player Load'])
-
-plt.hist(df['Total Player Load'], bins=30, density=True, alpha=0.6, color='r')
-
-xmin, xmax = plt.xlim()
-x = np.linspace(xmin, xmax, 100)
-p = stats.norm.pdf(x, mu, std)
-plt.plot(x, p, 'k', linewidth=2)
-
+plt.figure()
+sns.histplot(df['Total Player Load'], bins=30, color='r')
 plt.title('Total Player Load')
+plt.show()
 
-scipy_skewness = stats.skew(df['Total Player Load'])
+skewness = stats.skew(df['Total Player Load'])
 
-scipy_skewness
+plt.show()
+print(f'Skewness={skewness}')
 ```
 
 ```Python
-descriptive_stats = df.describe()
+df['Date'] = pd.to_datetime(df['Date'], format='mixed')
+players = df['Player Name'].unique()
 
-descriptive_stats
+results = []
+for player in players:
+    player_data = df[df['Player Name'] == player]
+
+    most_recent_date = df['Date'].max()
+    cutoff_date = most_recent_date - pd.DateOffset(months=12)
+
+    sample_data = player_data[player_data['Date'] > cutoff_date]
+
+    pop_mean = df['Total Player Load'].mean()
+    pop_std = df['Total Player Load'].std()
+    pop_size = df['Total Player Load'].count()
+
+    sample_mean = sample_data['Total Player Load'].mean()
+    sample_std = sample_data['Total Player Load'].std()
+    sample_size = sample_data['Total Player Load'].count()
+
+    raw_diff = sample_mean - pop_mean
+    percent = raw_diff / pop_mean
+    cohens_d = raw_diff / sample_std
+    standard_percent = ((cohens_d * pop_std) / pop_mean)
+
+    results.append({
+        'Player': player,
+        'Standardized Percent Difference': standard_percent,
+        'Percent Difference': percent,
+        'Effect Size': cohens_d,
+        'Raw Difference': raw_diff,
+        'Sample Mean': sample_mean,
+        'Population Mean': "{:.6f}".format(pop_mean),
+        'Sample Size': sample_size,
+        'Population Size': pop_size
+    })
+
+df_results = pd.DataFrame(results).dropna()
+df_results = df_results[df_results['Sample Size'] > 100]
+df_results
 ```
 
 ```Python
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+plt.figure(figsize=(10,6))
+ax = sns.barplot(df_results, x='Standardized Percent Difference', y='Player', color='r', zorder=2)
+plt.title('Average Athlete Total Player Load Compared to Team Average - Standardized')
+plt.grid(True, linestyle='--', zorder=1)
+for p in ax.patches:
+    ax.text(p.get_width(),
+            p.get_y() + p.get_height() / 2,
+            '{:.2f}'.format(p.get_width()),
+            ha='left', va='center',
+            fontsize=10)
 
-df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
-
-most_recent_date = df['Date'].max()
-time = most_recent_date - pd.DateOffset(months=12)
-data = df[df['Date'] >= time]
-
-athletes = data['Player Name'].unique()
-
-means = []
-for athlete in athletes:
-    athlete_data = data[data['Player Name'] == athlete]
-    if not athlete_data.empty:
-        mean = athlete_data['Total Player Load'].mean()
-        means.append((athlete, mean))
-
-means = pd.DataFrame(means, columns=['Player Name', 'Player Load Average'])
-
-means['Avg Ratio'] = (means['Player Load Average'] / 188.979266) - 1
-
-means = means[~means['Player Name'].isin(['Outlier player'])]
-
-plt.figure(figsize=(10, 6))
-ax = sns.barplot(means, x='Avg Ratio', y='Player Name', color='r', zorder=3)
-
-for index, value in enumerate(means['Avg Ratio']):
-    plt.text(value, index, f'{value:.2f}', va='center', zorder=4)
-
-ax.grid(True, axis='x', linestyle='--', alpha=0.7, zorder=1)
-ax.grid(True, axis='y', linestyle='--', alpha=0.7, zorder=1)
-
-plt.title('Total Player Load Athlete Average Comparison', fontsize=14)
-plt.xlabel('Total Player Load Percentage of Team Average', fontsize=12)
-plt.ylabel('Player Name', fontsize=12)
-
-plt.tight_layout()
 plt.show()
 ```
