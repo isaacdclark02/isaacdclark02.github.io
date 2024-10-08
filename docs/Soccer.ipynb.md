@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 csv_files = glob.glob(os.path.join(
-    'data.csv', '*.csv'
+    '/Users/isaacdclark02/Library/CloudStorage/OneDrive-UniversityofUtah/Internship/Soccer Project/Catapult Data', '*.csv'
 ))
 
 catapult = []
@@ -22,7 +22,7 @@ for file in csv_files:
 
 catapult = pd.concat(catapult, ignore_index=True)
 
-df = catapult[~catapult['Player Name'].isin(['List of players to remove'])]
+df = catapult[~catapult['Player Name'].isin(['Athletes to remove'])]
 
 df = df[['Player Name', 'Date', 'Total Player Load']]
 ```
@@ -60,17 +60,11 @@ for player in players:
     sample_std = sample_data['Total Player Load'].std()
     sample_size = sample_data['Total Player Load'].count()
 
-    raw_diff = sample_mean - pop_mean
-    percent = raw_diff / pop_mean
-    cohens_d = raw_diff / sample_std
-    standard_percent = ((cohens_d * pop_std) / pop_mean)
+    percent = (sample_mean - pop_mean) / pop_mean
 
     results.append({
         'Player': player,
-        'Standardized Percent Difference': standard_percent,
         'Percent Difference': percent,
-        'Effect Size': cohens_d,
-        'Raw Difference': raw_diff,
         'Sample Mean': sample_mean,
         'Population Mean': "{:.6f}".format(pop_mean),
         'Sample Size': sample_size,
@@ -84,8 +78,8 @@ df_results
 
 ```Python
 plt.figure(figsize=(10,6))
-ax = sns.barplot(df_results, x='Standardized Percent Difference', y='Player', color='r', zorder=2)
-plt.title('Average Athlete Total Player Load Compared to Team Average - Standardized')
+ax = sns.barplot(df_results, x='Percent Difference', y='Player', color='r', zorder=2)
+plt.title('Average Athlete Total Player Load Compared to Team Average')
 plt.grid(True, linestyle='--', zorder=1)
 for p in ax.patches:
     ax.text(p.get_width(),
