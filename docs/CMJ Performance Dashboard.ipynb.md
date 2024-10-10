@@ -314,7 +314,7 @@ def time_series(data, metric, athlete):
         fig.add_trace(go.Scatter(
             x=athlete_data['date'],
             y=[athlete_avg] * len(athlete_data),
-            name='Average', 
+            name=f'{athlete}\'s<br>Average',
             mode='lines',
             line=dict(color='#666666', width=2, dash='dash')
         ))
