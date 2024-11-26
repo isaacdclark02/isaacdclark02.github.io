@@ -6,36 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.bundle.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/isaacdclark02" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-linkedin"></i>
-          </a>
-          <span class="icon-text">LinkedIn</span>
-        </div>
-        <div class="navbar-item">
-          <a href="mailto:isaacdunsterclark02@gmail.com" class="icon is-large has-text-light">
-            <i class="fas fa-2x fa-envelope"></i>
-          </a>
-          <span class="icon-text">Email</span>
-        </div>
-        <div class="navbar-item">
-          <a href="docs/Isaac Clark - Resume.pdf" class="icon is-large has-text-light">
-            <i class="fas fa-2x fa-file-pdf"></i>
-          </a>
-          <span class="icon-text">Resume</span>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <section class="hero is-primary">
+  <section class="hero is-primary" style="padding-top: 50px;">
     <div class="hero-body">
       <div class="container">
         <div class="level">
@@ -51,8 +26,24 @@
               Isaac Clark
             </h1>
             <h2 class="subtitle">
-              Mathematics, BS
+              Mathematics BS
             </h2>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 50px;">
+              <a href="https://www.linkedin.com/in/isaacdclark02" style="display: flex; align-items: center; text-decoration: none; color: white;">
+                <i class="material-icons" style="font-size: 24px; margin-right: 8px; vertical-align: middle;">link</i>
+                <strong>LinkedIn</strong>
+              </a>
+            
+              <a href="mailto:isaacdunsterclark02@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: white;">
+                <i class="material-icons" style="font-size: 24px; margin-right: 8px; vertical-align: middle;">email</i>
+                <strong>isaacdunsterclark02@gmail.com</strong>
+              </a>
+            
+              <a href="docs/Isaac Clark - Resume.pdf" style="display: flex; align-items: center; text-decoration: none; color: white;">
+                <i class="material-icons" style="font-size: 24px; margin-right: 8px; vertical-align: middle;">description</i>
+                <strong>Resume</strong>
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -62,7 +53,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">Portfolio</h1>
-      <hr />
+      <hr/>
 
       <div class="card">
         <div class="card-content">
@@ -75,7 +66,7 @@
             <p>
               The end of semester project for my Mathematical Finance course. The project involved aquiring historical 
               financial data and then calculating the relevent parameters to construct a system of stochastic differential
-              equations required to simulate security prices using a geometric Brownian motion model.
+              equations required to run a monte carlo simulation of security prices using a geometric Brownian motion model.
             </p>
             <img class="Team" src="img/Stock Price Simulation.png">
           </div>
@@ -238,46 +229,11 @@
     </div>
   </section>
 
-  <!--
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Links</h1>
-      <hr />
-      <nav class="level">
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="https://www.linkedin.com/in/isaacdclark02" class="icon is-large">
-              <i class="fab fa-2x fa-linkedin"></i>
-            </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/isaacdclark02">LinkedIn</a></p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="mailto:isaacdunsterclark02@gmail.com" class="icon is-large">
-              <i class="fas fa-2x fa-envelope"></i>
-            </a>
-            <p class="heading"><a href="mailto:isaacdunsterclark02@gmail.com">isaacdunsterclark02@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="docs/Isaac Clark - Resume.pdf" class="icon is-large">
-              <i class="fas fa-2x fa-file"></i>
-            </a>
-            <p class="heading"><a href="docs/Isaac Clark - Resume.pdf">Resume</a></p>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </section>
-  -->
-
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
         <a href="https://github.com/isaacdclark02/isaacdclark02.github.io" target="_blank" class="icon has-text-primary">
-          <i class="fab fa-github"></i> <strong>GitHub</strong></a>
+          <span class="material-icons" style="font-size: 24px;">code</span> <strong>GitHub</strong></a>
       </p>
     </div>
   </footer>
