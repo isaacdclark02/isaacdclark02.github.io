@@ -26,17 +26,16 @@ def simulated_prices(mu, sqrt_A, S_0, T, dt, simulations):
 
 T = 1
 dt = 1 / 252
-simulations = 1000
-S_0 = data.iloc[0].values
+simulations = 10000
+S_0 = data.iloc[-1].values
 
 trajectories = simulated_prices(mu.values, sqrt_A, S_0, T, dt, simulations)
 
-time = np.linspace(0, T, int(T / dt) + 1)
 for i, ticker in enumerate(data.columns):
     plt.figure(figsize=(10, 6))
-    plt.plot(time, trajectories[:, i, :], alpha=0.5)
+    plt.plot(np.linspace(1, T+1, int(T / dt) + 1), trajectories[:, i, :], alpha=0.5)
     plt.plot(np.linspace(0, T, len(data)), data[ticker], label='Real Price', color='black')
-    plt.title(f'{ticker} Stock Price')
+    plt.title('Stock Price')
     plt.xlabel('Time (Years)')
     plt.ylabel('Price')
     plt.legend()
