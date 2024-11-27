@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
 
-tickers = []
+tickers = sorted([])
 data = yf.download(tickers, period='1y')['Close']
 
 log_returns = np.log(data / data.shift(1)).dropna()
@@ -31,7 +31,7 @@ S_0 = data.iloc[-1].values
 
 trajectories = simulated_prices(mu.values, sqrt_A, S_0, T, dt, simulations)
 
-for i, ticker in enumerate(data.columns):
+for i, ticker in enumerate(tickers):
     plt.figure(figsize=(10, 6))
     plt.plot(np.linspace(1, T+1, int(T / dt) + 1), trajectories[:, i, :], alpha=0.5)
     plt.plot(np.linspace(0, T, len(data)), data[ticker], label='Real Price', color='black')
