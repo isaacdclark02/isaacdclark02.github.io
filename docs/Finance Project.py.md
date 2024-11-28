@@ -26,16 +26,28 @@ def simulated_prices(mu, sqrt_A, S_0, T, dt, simulations):
 
 T = 1
 dt = 1 / 252
-simulations = 10000
+simulations = 1000
 S_0 = data.iloc[-1].values
 
 trajectories = simulated_prices(mu.values, sqrt_A, S_0, T, dt, simulations)
 
-for i, ticker in enumerate(tickers):
+mean_simulation = np.mean(trajectories, axis=2)
+percentiles = np.percentile(trajectories, [5, 95], axis=2)
+
+time_points = np.linspace(1, T+1, trajectories.shape[0])
+for i, ticker in enumerate(data.columns):
     plt.figure(figsize=(10, 6))
-    plt.plot(np.linspace(1, T+1, int(T / dt) + 1), trajectories[:, i, :], alpha=0.5)
-    plt.plot(np.linspace(0, T, len(data)), data[ticker], label='Real Price', color='black')
-    plt.title('Stock Price')
+    plt.plot(np.linspace(0, T, len(data)), data[ticker].values, label='Real Price', color='black')
+    plt.plot(time_points, mean_simulation[:, i], label='Mean Value', color='blue')
+    plt.fill_between(
+        time_points,
+        percentiles[0, :, i],
+        percentiles[1, :, i],
+        color='blue',
+        alpha=0.1,
+        label='Confidence Interval (90%)'
+    )
+    plt.title(f'Stock Price Simulation')
     plt.xlabel('Time (Years)')
     plt.ylabel('Price')
     plt.legend()
