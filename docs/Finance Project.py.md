@@ -34,11 +34,11 @@ trajectories = simulated_prices(mu.values, sqrt_A, S_0, T, dt, simulations)
 mean_simulation = np.mean(trajectories, axis=2)
 percentiles = np.percentile(trajectories, [5, 95], axis=2)
 
-time_points = np.linspace(1, T+1, trajectories.shape[0])
+time_points = np.linspace(0, T, trajectories.shape[0])
 for i, ticker in enumerate(data.columns):
     plt.figure(figsize=(10, 6))
-    plt.plot(np.linspace(0, T, len(data)), data[ticker].values, label='Real Price', color='black')
-    plt.plot(time_points, mean_simulation[:, i], label='Mean Value', color='blue')
+    plt.plot(np.linspace(-1, 0, len(data)), data[ticker].values, label='Real Price', color='black')
+    plt.plot(time_points, mean_simulation[:, i], label='Mean Simulated Price', color='blue')
     plt.fill_between(
         time_points,
         percentiles[0, :, i],
