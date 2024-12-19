@@ -53,201 +53,210 @@
   <section class="section">
     <div class="container">
       <h1 class="title">Portfolio</h1>
-      <hr/>
 
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Simulating Stock Prices with a Geometric Brownian Motion Model</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>
-              The end of semester project for my first semester mathematical finance course. The project involved aquiring 
-              historical financial data and then calculating the relevent parameters to construct a system of stochastic 
-              differentialequations required to run a monte carlo simulation of security prices using a geometric Brownian 
-              motion model.
-            </p>
-            <img class="Team" src="img/Stock Price Simulation.png">
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project.py.md">Project Code</a>
-          </div>
-        </div>
+      <div class="tabs is-boxed">
+        <ul>
+          <li class="is-active" data-tab="sports-science"><a>Sports Science</a></li>
+          <li data-tab="quant-finance"><a>Quantitative Finance</a></li>
+        </ul>
       </div>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Athlete Countermovement Jump Performance Analysis</p>
+      <div id="sports-science" class="tab-content">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Athlete Countermovement Jump Performance Analysis</p>
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <p>
-              Long term project involving the indepth analysis of countermovement jump performance in athletes across multiple
-              sports. Advanced data mining methods were used, including latent factor analysis, to break down and simplify
-              the vast amount of data in order to better understand the metrics and trends in an athlete's jump performance.
-              Findings were presented to stakeholders and used to improve athlete training plans.
-            </p>
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CMJ%20Performance%20Analysis.ipynb.md">Project Code</a>
+            <div class="content">
+              <p>
+                Long term project involving the indepth analysis of countermovement jump performance in athletes across multiple
+                sports. Advanced data mining methods were used, including latent factor analysis, to break down and simplify
+                the vast amount of data in order to better understand the metrics and trends in an athlete's jump performance.
+                Findings were presented to stakeholders and used to improve athlete training plans.
+              </p>
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CMJ%20Performance%20Analysis.ipynb.md">Project Code</a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Athlete Countermovement Jump Performance Dashboard</p>
+        
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Athlete Countermovement Jump Performance Dashboard</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                This project involved the development of a Plotly Dash app in python with the intended purpose of 
+                creating an easy to use dashboard for strength and conditioning coaches that displays various 
+                statistics on countermovement jump performance of teams and individual athletes. Development 
+                included working with the IT department to deploy the dashboard app and presenting the dashboard 
+                to strength and conditioning coaches for feedback.
+              </p>
+              <img class="Team" src="img/Dashboard Team Page.png">
+              <img class="Athlete" src="img/Dashboard Athlete Page.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CMJ%20Performance%20Dashboard.ipynb.md">Project Code</a>
             </div>
           </div>
-          <div class="content">
-            <p>
-              This project involved the development of a Plotly Dash app in python with the intended purpose of 
-              creating an easy to use dashboard for strength and conditioning coaches that displays various 
-              statistics on countermovement jump performance of teams and individual athletes. Development 
-              included working with the IT department to deploy the dashboard app and presenting the dashboard 
-              to strength and conditioning coaches for feedback.
-            </p>
-            <img class="Team" src="img/Dashboard Team Page.png">
-            <img class="Athlete" src="img/Dashboard Athlete Page.png">
+        </div>
+  
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Exploring Relationships Between Lower Body STI and Force Plate Performance</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Advanced statistical analysis was used as part of this project to develop a predictive model capable of 
+                predicting an individual athlete's risk of injury using countermovement jump metrics. Multiple methods and 
+                models were tested with various athlete's from different sports using various test metrics. Findings and 
+                conclusions were presented at the conclusion of the project and at the 2024 AHPS Symposium.
+              </p>
+              <img class="Poster" src="img/Symposium Poster Presentation.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Injury%20Analysis.ipynb.md">Project Code</a>
+            </div>
           </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CMJ%20Performance%20Dashboard.ipynb.md">Project Code</a>
+        </div>
+  
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Statistical Analysis of Player Load in Collegiate Soccer Athletes</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                A short project involving the analysis of individual soccer athlete's average player load in comparison 
+                to the team average. Analysis was used, in conjunction with coaches and staff, to assess athlete's comparative 
+                exertion during practice.
+              </p>
+              <img class="Team" src="img/Player Load.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Soccer.ipynb.md">Project Code</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Investigating the Correlation Between Strength and Power Metrics in American Football Athletes</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Our project objectives were to analyze existing data collected on collegiate football athletes 
+                to determine if any relationships between athlete's strength and power existed. Analysis and conclusions 
+                would be used to determine training efficasy between player groups. The creation of a simple SQL database 
+                was also part of this project. Findings and conclusions were presented at the conclusion of the project.
+              </p>
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Football%20Strength%20vs%20Power%20Analysis.ipynb.md">Project Code</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Mens Basketball Post Season Performance Analysis</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Short project involving a post season analysis of collegiate basketball players. Objectives were to find and 
+                highlight areas of weakness to help strength and conditioning coaches improve their training programs for the 
+                following season.
+              </p>
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/MBB%20Post%20Season%20Analysis.ipynb.md">Project Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Analysis of NFL Combine Performance and Being Drafted</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Final project completed as part of a data science course at the University of Utah. Project explored NFL combine
+                performance in relation to an athlete's probability of being drated. A logistic regression was employed
+                to create a predictive model and the most important metrics in predicting whether an athlete would be drafted were 
+                observed.
+              </p>
+              <img class="NFL" src="img/NFL Combine Analysis.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Final%20Project%20NFL.ipynb.md">Project Code</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Exploring Relationships Between Lower Body STI and Force Plate Performance</p>
+      <div id="quant-finance" class="tab-content" style="display: none;">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Simulating Stock Prices with a Geometric Brownian Motion Model</p>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                The end of semester project for my first semester mathematical finance course. The project involved aquiring 
+                historical financial data and then calculating the relevent parameters to construct a system of stochastic 
+                differentialequations required to run a monte carlo simulation of security prices using a geometric Brownian 
+                motion model.
+              </p>
+              <img class="Team" src="img/Stock Price Simulation.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project.py.md">Project Code</a>
             </div>
           </div>
-          <div class="content">
-            <p>
-              Advanced statistical analysis was used as part of this project to develop a predictive model capable of 
-              predicting an individual athlete's risk of injury using countermovement jump metrics. Multiple methods and 
-              models were tested with various athlete's from different sports using various test metrics. Findings and 
-              conclusions were presented at the conclusion of the project and at the 2024 AHPS Symposium.
-            </p>
-            <img class="Poster" src="img/Symposium Poster Presentation.png">
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Injury%20Analysis.ipynb.md">Project Code</a>
-          </div>
         </div>
-      </div>
 
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Mean-Variance Portfolio Optimization</p>
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Mean-Variance Portfolio Optimization</p>
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <p>
-              Mid-semester project part of my first semester mathematical finance course. Optimized a portfolio of 
-              securities with a risk-free assset using modern portfolio theory. 
-            </p>
-            <img class="Team" src="img/CAPM Plot.png">
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CAPM%20Project.py.md">Project Code</a>
+            <div class="content">
+              <p>
+                Mid-semester project part of my first semester mathematical finance course. Optimized a portfolio of 
+                securities with a risk-free assset using modern portfolio theory. 
+              </p>
+              <img class="Team" src="img/CAPM Plot.png">
+            </div>
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/CAPM%20Project.py.md">Project Code</a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Statistical Analysis of Player Load in Collegiate Soccer Athletes</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>
-              A short project involving the analysis of individual soccer athlete's average player load in comparison 
-              to the team average. Analysis was used, in conjunction with coaches and staff, to assess athlete's comparative 
-              exertion during practice.
-            </p>
-            <img class="Team" src="img/Player Load.png">
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Soccer.ipynb.md">Project Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Investigating the Correlation Between Strength and Power Metrics in American Football Athletes</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>
-              Our project objectives were to analyze existing data collected on collegiate football athletes 
-              to determine if any relationships between athlete's strength and power existed. Analysis and conclusions 
-              would be used to determine training efficasy between player groups. The creation of a simple SQL database 
-              was also part of this project. Findings and conclusions were presented at the conclusion of the project.
-            </p>
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Football%20Strength%20vs%20Power%20Analysis.ipynb.md">Project Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Mens Basketball Post Season Performance Analysis</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>
-              Short project involving a post season analysis of collegiate basketball players. Objectives were to find and 
-              highlight areas of weakness to help strength and conditioning coaches improve their training programs for the 
-              following season.
-            </p>
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/MBB%20Post%20Season%20Analysis.ipynb.md">Project Code</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Analysis of NFL Combine Performance and Being Drafted</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>
-              Final project completed as part of a data science course at the University of Utah. Project explored NFL combine
-              performance in relation to an athlete's probability of being drated. A logistic regression was employed
-              to create a predictive model and the most important metrics in predicting whether an athlete would be drafted were 
-              observed.
-            </p>
-            <img class="NFL" src="img/NFL Combine Analysis.png">
-          </div>
-          <div class="code-link">
-            <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Final%20Project%20NFL.ipynb.md">Project Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <footer class="footer">
@@ -259,7 +268,16 @@
     </div>
   </footer>
 
-  <script src="js/bundle.js"></script>
+  <script>
+    document.querySelectorAll('.tabs li').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tabs li').forEach(t => t.classList.remove('is-active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+        tab.classList.add('is-active');
+        document.getElementById(tab.getAttribute('data-tab')).style.display = 'block';
+      });
+    });
+  </script>
 </body>
 
 </html>
