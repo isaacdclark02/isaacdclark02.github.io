@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 T = 1  
 M = 1000 
-K = 10000  
-dt = T / M  
+K = 10000 
+dt = T / M 
 
 dW = np.random.normal(0, np.sqrt(dt), (K, M))
 W = np.hstack((np.zeros((K, 1)), np.cumsum(dW, axis=1)))
@@ -250,7 +250,7 @@ std_dev = data['Log Returns'].std()
 
 annualized_volatility = std_dev * np.sqrt(252)
 
-print(f"Annualized Historical Volatility: {annualized_volatility:.2%}")
+print(f'Annualized Historical Volatility: {annualized_volatility:.2%}')
 ```
 
 ```Python
@@ -260,23 +260,23 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Black-Scholes formula for option pricing
-def black_scholes(S, K, T, r, sigma, option_type="call"):
+def black_scholes(S, K, T, r, sigma, option_type='call'):
     d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2 = d1 - sigma * np.sqrt(T)
 
-    if option_type == "call":
+    if option_type == 'call':
         price = S * si.norm.cdf(d1) - K * np.exp(-r * T) * si.norm.cdf(d2)
-    elif option_type == "put":
+    elif option_type == 'put':
         price = K * np.exp(-r * T) * si.norm.cdf(-d2) - S * si.norm.cdf(-d1)
     else:
-        raise ValueError("Invalid option type. Choose 'call' or 'put'.")
+        raise ValueError('Invalid option type. Choose 'call' or 'put'.')
 
     return price
 
 # Delta calculation
-def delta(S, K, T, r, sigma, option_type="call"):
+def delta(S, K, T, r, sigma, option_type='call'):
     d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
-    if option_type == "call":
+    if option_type == 'call':
         return si.norm.cdf(d1)
     else:
         return si.norm.cdf(d1) - 1
@@ -296,11 +296,11 @@ sigma1, sigma2 = 0.2, 0.25
 returns = np.random.normal(r / 252, sigma1 / np.sqrt(252), days)
 SPX_prices = S0 * np.cumprod(1 + returns)
 
-option1_price = black_scholes(S0, K1, T, r, sigma1, "call")
-option2_price = black_scholes(S0, K2, T, r, sigma2, "call")
+option1_price = black_scholes(S0, K1, T, r, sigma1, 'call')
+option2_price = black_scholes(S0, K2, T, r, sigma2, 'call')
 
-delta1 = delta(S0, K1, T, r, sigma1, "call")
-delta2 = delta(S0, K2, T, r, sigma2, "call")
+delta1 = delta(S0, K1, T, r, sigma1, 'call')
+delta2 = delta(S0, K2, T, r, sigma2, 'call')
 
 vega1 = vega(S0, K1, T, r, sigma1)
 vega2 = vega(S0, K2, T, r, sigma2)
@@ -311,24 +311,24 @@ alpha = delta1 + beta * delta2
 
 portfolio_values = []
 for S in SPX_prices:
-    V1 = black_scholes(S, K1, T, r, sigma1, "call")
-    V2 = black_scholes(S, K2, T, r, sigma2, "call")
+    V1 = black_scholes(S, K1, T, r, sigma1, 'call')
+    V2 = black_scholes(S, K2, T, r, sigma2, 'call')
     portfolio_value = V1 + beta * V2 - alpha * S
     portfolio_values.append(portfolio_value)
 
 plt.figure(figsize=(8, 6))
-plt.plot(portfolio_values, label="Portfolio")
-plt.xlabel("Days")
-plt.ylabel("Portfolio Value")
-plt.title("Performance of Hedged Portfolio")
+plt.plot(portfolio_values, label='Portfolio')
+plt.xlabel('Days')
+plt.ylabel('Portfolio Value')
+plt.title('Performance of Hedged Portfolio')
 plt.legend()
 plt.grid(True)
 plt.show()
 
 # Display summary
 df_summary = pd.DataFrame({
-    "Day": np.arange(1, days + 1),
-    "SPX Price": SPX_prices,
-    "Portfolio Value": portfolio_values
+    'Day': np.arange(1, days + 1),
+    'SPX Price': SPX_prices,
+    'Portfolio Value': portfolio_values
 })
 ```
