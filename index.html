@@ -28,12 +28,6 @@
             <h2 class="subtitle">
               Mathematics BS
             </h2>
-            <p style="display: flex; justify-content: center; align-items: center; gap: 50px;">
-              <a href="https://www.linkedin.com/in/isaacdclark02" style="display: flex; align-items: center; text-decoration: none; color: white;">
-                <i class="material-icons" style="font-size: 24px; margin-right: 8px; vertical-align: middle;">people</i>
-                <strong>LinkedIn</strong>
-              </a>
-            </p>
           </div>
         </div>
       </div>
@@ -44,8 +38,43 @@
     <div class="container">
       <h1 class="title">Portfolio</h1>
 
-      <div>
+      <div class="tabs is-boxed">
+        <ul>
+          <li class="is-active" data-tab="project-tab"><a>Projects</a></li>
+          <li data-tab="publication-tab"><a>Publications</a></li>
+        </ul>
+      </div>
+
+      <div id="project-tab" class="tab-content">
         <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">PDE Snowpack Temperature Model</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Description
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  
+                </p>
+
+                <img class="Temp" src="img/Temperature Evolution.png">
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="docs/Climate Mathematics Project.pdf">Project Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-gap">
           <div class="card-content">
             <div class="media">
               <div class="media-content">
@@ -56,7 +85,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -85,11 +114,11 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
-                  Advanced statistical analysis was used as part of this project to develop a predictive model capable of predicting an individual athlete's risk of injury using countermovement jump metrics. Multiple methods and models were tested with various athlete's from different sports using various test metrics. Findings and conclusions were presented at the conclusion of the project and at the 2024 AHPS Symposium.
+                  Advanced statistical analysis was used as part of this project to develop a predictive model capable of predicting an individual athlete's risk of injury using countermovement jump metrics. Multiple methods and models were tested with various athlete's from different sports using various test metrics. Findings and conclusions were presented at the 2024 Applied Health and Performance Science Symposium.
                 </p>
 
                 <img class="Poster" src="img/Symposium Poster Presentation.png">
@@ -113,7 +142,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -141,7 +170,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -167,7 +196,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -193,7 +222,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -221,7 +250,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -231,7 +260,7 @@
             </div>
 
             <div class="code-link">
-              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%204.py.md">Project Code</a>
+              <a href="docs/Finance II Project 2.pdf">Project Report</a>
             </div>
           </div>
         </div>
@@ -247,7 +276,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -257,7 +286,7 @@
             </div>
 
             <div class="code-link">
-              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%203.ipynb.md">Project Code</a>
+              <a href="docs/Finance II Project 1.pdf">Project Report</a>
             </div>
           </div>
         </div>
@@ -273,7 +302,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -301,7 +330,7 @@
             <div class="content">
               <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
                 <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Project Description
+                Description
               </p>
               <div class="project-content" style="display: none;">
                 <p>
@@ -318,6 +347,36 @@
           </div>
         </div>
       </div>
+
+      <div id="publication-tab" class="tab-content" style="display: none;">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">The Citric Acid Cycle: A Mathematical Perspective</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Abstract
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  The human body consists of highly complex and organized biochemical systems. There are countless mechanisms at work that make the body function. In this study, we formulate a system of ordinary differential equations (ODEs) to model the concentration gradients of the various chemicals found in the Citric Acid cycle. The Citric Acid cycle, also known as the Krebs or TCA cycle, is the primary energy creation mechanism in the cell efficiently breaking down food sources into the necessary components for Adenosine Tri-phosphate (ATP) synthesis. The model considers the interactions of each of these chemicals, and the speed of the reactions, necessary to maintain a stable equilibrium. We assume a semi-closed system contained in the inner membrane of the mitochondria to simplify the model and reduce the number of variables. Using approximate steady-state concentrations for each chemical while at rest, we optimize the reaction rate constants such that the concentrations remain steady-state. This allows us to observe, mathematically, the aspects of the body that are used to govern the production of ATP in the body and maintain homeostasis. 
+                </p>
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="docs/Citric Acid Cycle Project.pdf">Paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <footer class="footer">
@@ -333,9 +392,10 @@
     document.querySelectorAll('.tabs li').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tabs li').forEach(t => t.classList.remove('is-active'));
-        document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
         tab.classList.add('is-active');
-        document.getElementById(tab.getAttribute('data-tab')).style.display = 'block';
+        const target = tab.getAttribute('data-tab');
+        document.getElementById(target).style.display = 'block';
       });
     });
     function toggle(element) {
