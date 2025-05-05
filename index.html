@@ -46,11 +46,17 @@
       </div>
 
       <div id="project-tab" class="tab-content">
-        <div class="card">
+        <div class="card-gap">
+          <h4 class="title is-4">
+            Game Theory
+          </h4>
+        </div>
+
+        <div class="card card-gap">
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-5">PDE Snowpack Temperature Model</p>
+                <p class="title is-5">Cost Allocation</p>
               </div>
             </div>
 
@@ -61,17 +67,135 @@
               </p>
               <div class="project-content" style="display: none;">
                 <p>
-                  
+                  Final project 
                 </p>
-
-                <img class="Temp" src="img/Temperature Evolution.png">
               </div>
             </div>
 
             <div class="code-link">
-              <a href="docs/Climate Mathematics Project.pdf">Project Report</a>
+              <a href="docs/Finance II Project 2.pdf">Project Report</a>
             </div>
           </div>
+        </div>
+
+        <div class="card-gap">
+          <h4 class="title is-4">
+            Finance
+          </h4>
+        </div>
+
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">Hierarchical Risk Parity Portfolio Optimization</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Description
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  Final project for my second semester mathematical finance course. The project consisted of a review of the literature regarding constructing portfolios using the the Hierarchical Risk Parity (HRP) approach, then using the HRP approach to construct our own hypothetical portfolios in python using the PyPortfolioOpt package. 
+                </p>
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="docs/Finance II Project 2.pdf">Project Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">Ito's Integral, Black-Scholes Model, and Beta Hedging</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Description
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  Multi-part project completed as the midsemester project for my second semester mathematical finance course. The first part of the project involved the calculation, simulation, and comparison of an Ito's integral and a Stratonovich itegral, and then simulating hypothetical stock prices using the Black-Scholes model. The second part involved running 1000 simulations of a hypothetical stock and then comparing the theoretical and realized variance of the stock. The final part involved collecting real world S&P 500 options data and attempt to reduce the vega exposure for options alpha and beta in a simulated beta hedging scenario using the Black-Scholes formula. 
+                </p>
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="docs/Finance II Project 1.pdf">Project Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">Simulating Stock Prices with a Geometric Brownian Motion Model</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Description
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  The end of semester project for my first semester mathematical finance course. The project involved aquiring historical financial data and then calculating the relevent parameters to construct a system of stochastic differentialequations required to run a monte carlo simulation of security prices using a geometric Brownian motion model.
+                </p>
+
+                <img class="Team" src="img/Stock Price Simulation.png">
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%202.py.md">Project Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">Markowitz Portfolio Optimization</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
+                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
+                Description
+              </p>
+              <div class="project-content" style="display: none;">
+                <p>
+                  Mid-semester project part of my first semester mathematical finance course. Optimized a portfolio of securities with a risk-free assset using modern portfolio theory. 
+                </p>
+
+                <img class="Team" src="img/CAPM Plot.png">
+              </div>
+            </div>
+
+            <div class="code-link">
+              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%201.py.md">Project Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-gap">
+          <h4 class="title is-4">
+            Sports Science
+          </h4>
         </div>
 
         <div class="card card-gap">
@@ -239,37 +363,17 @@
           </div>
         </div>
 
-        <div class="card card-gap">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-5">Hierarchical Risk Parity Portfolio Optimization</p>
-              </div>
-            </div>
-
-            <div class="content">
-              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
-                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Description
-              </p>
-              <div class="project-content" style="display: none;">
-                <p>
-                  Final project for my second semester mathematical finance course. The project consisted of a review of the literature regarding constructing portfolios using the the Hierarchical Risk Parity (HRP) approach, then using the HRP approach to construct our own hypothetical portfolios in python using the PyPortfolioOpt package. 
-                </p>
-              </div>
-            </div>
-
-            <div class="code-link">
-              <a href="docs/Finance II Project 2.pdf">Project Report</a>
-            </div>
-          </div>
+        <div class="card-gap">
+          <h4 class="title is-4">
+            Other
+          </h4>
         </div>
 
         <div class="card card-gap">
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-5">Ito's Integral, Black-Scholes Model, and Beta Hedging</p>
+                <p class="title is-5">PDE Snowpack Temperature Model</p>
               </div>
             </div>
 
@@ -280,69 +384,15 @@
               </p>
               <div class="project-content" style="display: none;">
                 <p>
-                  Multi-part project completed as the midsemester project for my second semester mathematical finance course. The first part of the project involved the calculation, simulation, and comparison of an Ito's integral and a Stratonovich itegral, and then simulating hypothetical stock prices using the Black-Scholes model. The second part involved running 1000 simulations of a hypothetical stock and then comparing the theoretical and realized variance of the stock. The final part involved collecting real world S&P 500 options data and attempt to reduce the vega exposure for options alpha and beta in a simulated beta hedging scenario using the Black-Scholes formula. 
+                  
                 </p>
+
+                <img class="Temp" src="img/Temperature Evolution.png">
               </div>
             </div>
 
             <div class="code-link">
-              <a href="docs/Finance II Project 1.pdf">Project Report</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card card-gap">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-5">Simulating Stock Prices with a Geometric Brownian Motion Model</p>
-              </div>
-            </div>
-
-            <div class="content">
-              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
-                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Description
-              </p>
-              <div class="project-content" style="display: none;">
-                <p>
-                  The end of semester project for my first semester mathematical finance course. The project involved aquiring historical financial data and then calculating the relevent parameters to construct a system of stochastic differentialequations required to run a monte carlo simulation of security prices using a geometric Brownian motion model.
-                </p>
-
-                <img class="Team" src="img/Stock Price Simulation.png">
-              </div>
-            </div>
-
-            <div class="code-link">
-              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%202.py.md">Project Code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card card-gap">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-5">Markowitz Portfolio Optimization</p>
-              </div>
-            </div>
-
-            <div class="content">
-              <p style="cursor: pointer; display: flex; align-items: center; gap: 2px;" onclick="toggle(this)">
-                <span class="arrow-icon" style="font-size: 16px; transition: transform 0.3s ease;">▸</span> 
-                Description
-              </p>
-              <div class="project-content" style="display: none;">
-                <p>
-                  Mid-semester project part of my first semester mathematical finance course. Optimized a portfolio of securities with a risk-free assset using modern portfolio theory. 
-                </p>
-
-                <img class="Team" src="img/CAPM Plot.png">
-              </div>
-            </div>
-
-            <div class="code-link">
-              <a href="https://github.com/isaacdclark02/isaacdclark02.github.io/blob/main/docs/Finance%20Project%201.py.md">Project Code</a>
+              <a href="docs/Climate Mathematics Project.pdf">Project Report</a>
             </div>
           </div>
         </div>
@@ -371,6 +421,10 @@
 
             <div class="code-link">
               <a href="docs/Citric Acid Cycle Project.pdf">Paper</a>
+            </div>
+            
+            <div class="code-link">
+              <a href="">DOI:jahfuabhfjDSBLFjSBd</a>
             </div>
           </div>
         </div>
